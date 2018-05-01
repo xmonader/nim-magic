@@ -76,7 +76,7 @@ const  MAGIC_NO_CHECK_TOKENS* = 0x100000         # Don't check ascii/tokens
 ### Step 3: Extract the types
 
 ```typedef struct magic_set *magic_t;```
-so the only type we have in a pointer to some struct (object)
+so the only type we have is a pointer to some struct (object)
 
 ```nim
 type Magic = object
@@ -171,7 +171,7 @@ From manpage:
 ### Step 5: Friendly API
 It'd be annoying for people to write C code and take care of pointers and such in a higher level language like nim
 
-So let's expose a proc `guessFile` takes a fikepath and flags and internally use the functions we exposed through the FFI in the previous step.
+So let's expose a proc `guessFile` takes a filepath and flags and internally use the functions we exposed through the FFI in the previous step.
 
 ```nim
 proc guessFile*(filepath: string, flags: cint = MAGIC_NONE): string =
