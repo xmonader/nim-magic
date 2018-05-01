@@ -184,6 +184,9 @@ proc guessFile*(filepath: string, flags: cint = MAGIC_NONE): string =
         result = $magic_file(mt, cstring(filepath))
     magic_close(mt)
 ```
-
+Only one note here to convert from `cstring` to `string` we use the `toString` operator `$` 
+```
+        result = $magic_file(mt, cstring(filepath))
+```
 
 Feel free to send me PRs to improve the library or tutorial :)
