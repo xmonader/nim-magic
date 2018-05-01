@@ -23,8 +23,8 @@ const  MAGIC_NO_CHECK_ELF* = 0x010000            # Don't check for elf details
 const  MAGIC_NO_CHECK_ASCII* = 0x020000         # Don't check for ascii files 
 const  MAGIC_NO_CHECK_TOKENS* = 0x100000         # Don't check ascii/tokens 
 
-import system, os
-
+import os
+    
 const libName* = "libmagic.so"
 
 type Magic = object

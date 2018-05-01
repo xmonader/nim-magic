@@ -28,9 +28,8 @@ ELF 64-bit LSB shared object, x86-64, version 1 (SYSV), dynamically linked, inte
 
 ### Step 1: Get the library info
 Well, libmagic has `libmagic.so` in your library path `/usr/lib/libmagic.so` and a header file `magic.h` in `/usr/include/magic.h`.
-We need to import system because it has all the ffi types we need and also create a constant for the libmagic library name.
+create a constant for the libmagic library name.
 ```nim
-import system
 const libName* = "libmagic.so"
 ```
 
